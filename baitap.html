@@ -16,15 +16,15 @@
 
     <script>
         // Khởi tạo biến
-        const fullName = "Hoang Pham Thanh";
-        const studentId = "27A4042985";
+        const fullName = "Nguyen Anh Dung";
+        const studentId = "27A4042919";
 
         // 1. Xử lý tạo Email
-        // Tách chuỗi: ["hoang", "pham", "thanh"]
+        // Tách chuỗi: ["nguyen", "anh", "dung"]
         const parts = fullName.toLowerCase().split(" ");
-        const lastNameChar = parts[0][0];   // Lấy chữ 'h'
-        const middleChar = parts[1][0];     // Lấy chữ 'p'
-        const firstName = parts[2];         // Lấy chữ 'thanh'
+        const lastNameChar = parts[0][0];   // Lấy chữ 'n'
+        const middleChar = parts[1][0];     // Lấy chữ 'a'
+        const firstName = parts[2];         // Lấy chữ 'dung'
         
         const email = `${lastNameChar}${middleChar}${firstName}.${studentId.toLowerCase()}@hvnh.edu.vn`;
 
@@ -34,11 +34,11 @@
         // Xác định khoa (Giả định A404 là Hệ thống thông tin quản lý)
         let faculty = "Chưa xác định";
         if (studentId.includes("A404")) {
-            faculty = "Công Nghệ Thông Tin & Kinh Tế S";
+            faculty = "Công Nghệ Thông Tin & Kinh Tế Số";
         }
 
         // 3. Tính tổng 4 số cuối
-        const lastFour = studentId.slice(-4); // Lấy "2985"
+        const lastFour = studentId.slice(-4); // Lấy "2919"
         const sum = lastFour.split('')
                             .reduce((total, num) => total + parseInt(num), 0);
 
